@@ -23,7 +23,7 @@ interface PostFormState {
 
 export async function createPost(
   formState: PostFormState,
-  formData: FormData,
+  formData: FormData
 ): Promise<PostFormState> {
   const result = postSchema.safeParse({
     title: formData.get("title"),
@@ -65,7 +65,7 @@ export async function createPost(
 export async function updatePost(
   id: string,
   formState: PostFormState,
-  formData: FormData,
+  formData: FormData
 ): Promise<PostFormState> {
   const result = postSchema.safeParse({
     title: formData.get("title"),
